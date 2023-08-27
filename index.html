@@ -8,15 +8,18 @@
 </head>
 <body>
     <div class="dados">
-        <div class="results">
+        <div class="dadosHorinzontais">
             <label>Sua Operação: </label>
             <input type='text' readonly id='calculo'>
         </div>
-        <div class="results">
+        <div class="dadosHorinzontais">
             <label>Resultado da sua operação: </label>
             <input type='text' readonly id='soma'>
         </div>
-        <button id="botao" onclick='chamarDados()'>Clique aqui</button>
+        <div>
+            <button id="botaoChamar" onclick='chamarDados()'>Chamar os Dados</button>
+            <button id="botaoRefresh" onclick='window.location.reload()'>Calcular Novamente</button>
+        </div>
     </div>
     <script type="text/javascript" src="script.js" async ></script>
 </body>
