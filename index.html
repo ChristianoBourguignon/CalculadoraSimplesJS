@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+</head>
+<body>
+    <script>
+        let nm = [];
+        let operacao;
+        let soma;
+        for (let i = 1;i<= 2;i++){
+            nm[i]=parseFloat(prompt(`Digite o ${i}° numero...`))
+            while (isNaN(nm[i]) || nm[i] == null ){
+                alert(`Você digitou ${nm[i]}° incorretamente, aceitamos apenas numeros!`)
+                nm[i]=parseFloat(prompt(`Digite o ${i} numero...`))
+            }
+        }
+        operacao = prompt('Escolha a operação do seu cálculo! Ex: / + * -');
+        while (operacao != '/' && operacao != '-' && operacao != '+' && operacao != '*'){
+            alert(`Você digitou a operação incorretamente! "${nm[i]}" não é válido. Digite qualquer um desses: / - + *`)
+            operacao = prompt('Escolha a operação do seu cálculo novamente! Ex: / + * -');
+        }
+        switch (operacao){
+            case '+':
+                soma = nm[1] + nm[2];
+                break;
+            case '-':
+                soma = nm[1] - nm[2];
+                break;
+            case '/':
+                soma = nm[1] / nm[2];
+                break;
+            case '*':
+                soma = nm[1] * nm[2];
+                break;
+        }
+        alert(`O resultado do seu cálculo ${nm[1]} ${operacao} ${nm[2]} é: ${soma}`)
+    </script>
+</body>
+</html>
